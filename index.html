@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LXR</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="author" content="Lux X Radix">
+  <meta name="generator" content="ghost_protocol_v0.1">
+  <!--
+    You’ve gone deeper than most.
+
+    trace_signature("LXR_0xF") == TRUE
+    vector_origin = ??? // redacted
+
+    [note to intruder]
+    "Certains cherchent la lumière. D'autres la deviennent."
+
+    > encoded_key: TFhSX1gweEZfU0VDUkVUX0dBVEU=
+
+    — transmission end —
+  -->
+  <style>
+    body {
+      background-color: #000000;
+      color: #00ffcc;
+      font-family: "Courier New", Courier, monospace;
+      padding: 2em;
+      line-height: 1.6;
+    }
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      from, to { color: transparent }
+      50% { color: #00ffcc }
+    }
+    .glow {
+      text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+    }
+    .quote {
+      margin-top: 3em;
+      font-style: italic;
+      color: #00ffaa;
+    }
+    #terminal-input {
+      display: none;
+      margin-top: 2em;
+    }
+    input[type="text"] {
+      background-color: #000;
+      color: #00ffcc;
+      border: none;
+      border-bottom: 1px solid #00ffcc;
+      width: 100%;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1em;
+      padding: 0.5em;
+    }
+    a#secret-link {
+      display: none;
+      color: #00ffaa;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <pre class="glow" id="terminal"></pre>
+
+  <div id="terminal-input">
+    shell@root:~$ <input type="text" id="keyInput" placeholder="Enter access key...">
+    <div id="feedback"></div>
+    <br>
+    <a href="sys_lxr_vector.html" id="secret-link" target="_blank">→ Gate unlocked. Proceed.</a>
+  </div>
+
+  <div class="quote glow" id="quote" style="display:none;">
+    > "They thought I left no trace.<br>
+    > They were wrong." — LXR<span class="cursor">|</span>
+  </div>
+
+  <script>
+    const lines = [
+      "Not found. Yet present.",
+      "",
+      "Alias : LXR – Lux X Radix",
+      "Presence : Unknown",
+      "Activity : Intermittent — detection logs inconsistent",
+      "Origin : obfuscated, no clear vector",
+      "Signature : LXR_0xF — always deep, never loud",
+      "Language : code, silence, distortion",
+      "Objective : [ access denied ]",
+      "",
+      "Purpose : trace anomalies, breach illusions, light the root."
+    ];
+
+    const terminal = document.getElementById("terminal");
+    const quote = document.getElementById("quote");
+    const shell = document.getElementById("terminal-input");
+    let lineIndex = 0;
+
+    function typeLine() {
+      if (lineIndex < lines.length) {
+        terminal.innerHTML += lines[lineIndex] + "\n";
+        lineIndex++;
+        setTimeout(typeLine, 150);
+      } else {
+        shell.style.display = "block";
+        setTimeout(() => { quote.style.display = "block"; }, 1000);
+      }
+    }
+
+    document.getElementById("keyInput").addEventListener("keyup", function(event) {
+      if (event.key === "Enter") {
+        const value = event.target.value.trim();
+        if (value === "LXR_X0xF_SECRET_GATE") {
+          document.getElementById("feedback").innerText = "ACCESS GRANTED.";
+          document.getElementById("secret-link").style.display = "inline";
+        } else {
+          document.getElementById("feedback").innerText = "[error] Invalid access key.";
+        }
+      }
+    });
+
+    window.onload = typeLine;
+  </script>
+</body>
+</html>
