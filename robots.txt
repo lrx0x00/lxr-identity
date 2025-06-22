@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /xr/
+Disallow: /sys_lxr_vector/
+Disallow: /.l0g/
+# note: everything has a shadow. some darker than others.

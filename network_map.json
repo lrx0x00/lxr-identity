@@ -1,0 +1,14 @@
+
+{
+  "node": "lxr_0xF",
+  "status": "inactive",
+  "last_seen": "2025-06-19T03:44:13Z",
+  "trace_vector": "/sys_lxr_vector",
+  "access_level": "0x03",
+  "signature": "confirmed",
+  "flags": [
+    "stealth",
+    "redirect_disabled",
+    "ghost_mode=true"
+  ]
+}
